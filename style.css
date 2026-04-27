@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(#393a43, #63513c);
+    height: 100vh;
+}
+
+.contaniner {
+
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 40px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+
+ul li a {
+    color: bisque;
+    text-decoration: none;
+    margin: 0 10px;
+    border-bottom: 3px solid transparent;
+    transition: 0.4s;
+}
+
+ul li a:hover {
+    transform: scale(1.2);
+    border-bottom-color: rgb(125, 113, 81);
+    color: rgb(250, 246, 241);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+}
+
+.content .text {
+    width: 40%;
+
+}
+
+.content .text h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: rgb(190, 181, 169);
+}
+
+.content .text p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: blanchedalmond;
+}
+
+
+
+.content .image {
+    width: 30%;
+}
+
+.content .image img {
+    width: 180px;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+.icons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icons img {
+    width: 40px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+ul li .home {
+    background: #8a7258;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+ul li .home:hover {
+    background: #f5f2ee;
+    color: rgb(241, 167, 76);
+}
+
+.content .text a {
+    text-decoration: none;
+    background: #393a43;
+    color: rgb(213, 169, 119);
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: block;
+    transition: 0.4s;
+    margin: 5px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .text a:hover {
+    transform: scale(1.1);
+    background: #f5f2ee;
+
+}
