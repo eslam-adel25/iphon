@@ -233,3 +233,164 @@ ul li .home:hover {
         gap: 10px;
     }
 }
+
+:root {
+    --primary-glow: rgba(213, 169, 119, 0.15);
+    --card-border: rgba(255, 255, 255, 0.05);
+}
+
+.mega-store {
+    position: relative;
+    padding: 150px 0;
+    background: #050505; /* أسود أعمق */
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* النص العملاق خلف البطاقات */
+.giant-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+/* تصميم البطاقة ككتلة زجاجية صلبة */
+.glass-card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: linear-gradient(145deg, #0f0f11, #050505);
+    border-radius: 40px;
+    border: 1px solid var(--card-border);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: border 0.4s ease;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.glass-card:hover {
+    border-color: rgba(213, 169, 119, 0.4);
+}
+
+/* النص الداخلي خلف الهاتف */
+.card-bg-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+}
+
+/* وضعية الهاتف فوق كل شيء */
+.product-visual {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 2;
+}
+
+.product-visual img {
+    height: 100%;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8));
+}
+
+.glass-card:hover .product-visual {
+    transform: translateX(-50%) translateY(-20px) scale(1.1);
+}
+
+/* تفاصيل المنتج */
+.product-details {
+    position: relative;
+    z-index: 3;
+}
+
+.tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d5a977;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.product-details h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-tag {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* الزر الدائري العصري */
+.cta-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-circle svg {
+    width: 20px;
+    fill: #000;
+}
+
+.cta-circle:hover {
+    background: #d5a977;
+    transform: rotate(-45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glass-card { width: 90%; height: auto; padding-top: 150px; margin-top: 50px; }
+    .giant-text { display: none; }
+}
